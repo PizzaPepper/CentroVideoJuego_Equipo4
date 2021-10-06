@@ -97,7 +97,12 @@ let trabajador = {
  telefono: 644444444
 };
 */
-const trabajador = new Trabajador(null,"Mario","Villa Itson",644444444);
+
+const trabajador ={
+    nombre: 'Sinforiano',
+    direccion: 'Las Palmas',
+    telefono: 642432555
+}
 
 //Agregar
 //trabajadoresDao.insertarDato(trabajador);
@@ -128,13 +133,14 @@ let videojuego = {
  version: 99.1
 };
 */
-const videojuego = new Videojuego(null,
-                                 'Fallout New vegas',
-                                 'Accio/Shooter - Aventura',
-                                 '+18',
-                                 'PC - Xbox - Playstation',
-                                 'Bethesda',
-                                 99.5);
+const videojuego = {
+    titulo: 'Fallout',
+    genero: 'Accion,Aventura,RPG',
+    clasificacion: '+18',
+    consola: 'PC,Xbox,Playstation',
+    fabricante: 'Bethesda',
+    version: 92.1
+}
 
 //Agregar
 //videojuegosDao.insertarDato(videojuego);

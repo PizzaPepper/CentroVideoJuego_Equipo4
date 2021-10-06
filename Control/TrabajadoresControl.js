@@ -1,17 +1,10 @@
 'use strict';
 
 const mongoose = require('mongoose');
-const Trabajador = require('../Dominio/Trabajador');
 const url = 'mongodb+srv://Usuario1:Z92TqjGyIPRqJPrd@equipo4.vjcs4.mongodb.net/CentroVideojuego';
-const userSchema = mongoose.Schema({
-  nombre: String,
-  direccion: String,
-  telefono: String
-});
+const userModel = require('../Modelo/Trabajador'); 
 
-const userModel = mongoose.model('trabajadores', userSchema);
-
-class TrabajadoresDAO {
+class TrabajadoresControl {
 
   async conexionBD() {
     return mongoose.connect(url)
@@ -105,4 +98,4 @@ class TrabajadoresDAO {
 
 }
 
-module.exports = TrabajadoresDAO;
+module.exports = TrabajadoresControl;
