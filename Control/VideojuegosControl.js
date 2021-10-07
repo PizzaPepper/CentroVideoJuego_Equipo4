@@ -20,8 +20,7 @@ class VideojuegosControl {
 
   async insertarDato(nuevoDato) {
     await this.conexionBD();
-    
-    const data = new gameModel({
+    const dato = new gameModel({
       titulo: nuevoDato.titulo,
       genero: nuevoDato.genero,
       clasificacion: nuevoDato.clasificacion,
@@ -30,7 +29,7 @@ class VideojuegosControl {
       version: nuevoDato.version
     });
 
-    await data.save();
+    await dato.save();
     console.log('Se agrego correctamente el dato: ' + nuevoDato.titulo);
     mongoose.disconnect();
     return dato;
@@ -50,18 +49,17 @@ class VideojuegosControl {
     return user;
   }
 
-  //Solo un dato se cambia?
-  async actualizarDato(idBuscar, consolaNueva) {
+  async actualizarDato(idBuscar, clasificacionNueva) {
     await this.conexionBD();
     const user = await gameModel.updateOne({
       _id: idBuscar
     }, {
       $set: {
-        consola: consolaNueva
+        clasificacion: clasificacionNueva
       }
     });
     if (user.modifiedCount != 0) {
-      console.log('El id ' + idBuscar + ' se actualizo correctamente con el dato nuevo: ' + consolaNueva);
+      console.log('El id ' + idBuscar + ' se actualizo correctamente con el dato nuevo: ' + clasificacionNueva);
     } else {
       console.log('El id ' + idBuscar + ' no existe');
     }

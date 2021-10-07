@@ -1,14 +1,13 @@
 'use strict';
-import {Schema,model} from 'mongoose'
+const mongoose = require('mongoose');
 
-const userSchema = new Schema({
-    correo:String,
-    constrasena:String,
-    nombre: String,
-    direccion: String,
-    telefono: String
-  });
+const userSchema = new mongoose.Schema({
+  correo: String,
+  contrasena: String,
+  nombre: String,
+  direccion: String,
+  telefono: String
+});
 
-const userModel = model('trabajadores', userSchema);
-
+const userModel = mongoose.model('trabajadores', userSchema);
 module.exports = userModel

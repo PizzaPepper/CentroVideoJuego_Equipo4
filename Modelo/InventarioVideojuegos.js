@@ -1,11 +1,11 @@
 'use strict';
-import {Schema,model,Types} from 'mongoose'
+const mongoose = require('mongoose');
 
-    const invGameSchema = new Schema({
-        existencias: Number,
-        videojuego: Types.ObjectId
-    });
+const invGameSchema = new mongoose.Schema({
+    existencia: Number,
+    videojuego: mongoose.Types.ObjectId,
+    registro: Array
+});
 
-    const invGameModel = model('trabajadores', invGameSchema);
-
+const invGameModel = mongoose.model('inventariovideojuegos', invGameSchema);
 module.exports = invGameModel;

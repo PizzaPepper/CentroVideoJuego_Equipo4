@@ -1,6 +1,0 @@
--REGISTRO-
-relacion juego
-relacion trabajador
-tipo = Entrada/Salida
-cantidad
-fecha

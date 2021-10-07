@@ -1,7 +1,7 @@
 'use strict';
-import {Schema,model} from 'mongoose'
+const mongoose = require('mongoose');
 
-const gameSchema = new Schema({
+const gameSchema = new mongoose.Schema({
     titulo: String,
     genero: Array,
     clasificacion: String,
@@ -10,5 +10,5 @@ const gameSchema = new Schema({
     version: Number
 });
 
-const gameModel = model('videojuegos', gameSchema);
+const gameModel = mongoose.model('videojuegos', gameSchema);
 module.exports = gameModel;
