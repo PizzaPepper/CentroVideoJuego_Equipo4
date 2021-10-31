@@ -2,13 +2,16 @@
   "name": "centrovideojuego_equipo4",
   "version": "1.0.0",
   "description": "",
-  "main": "pruebas.js",
+  "main": "server.js",
   "dependencies": {
-    "mongoose": "^6.0.8"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.8",
+    "morgan": "^1.10.0"
   },
-  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./server.js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/PizzaPepper/CentroVideoJuego_Equipo4/issues"
   },
-  "homepage": "https://github.com/PizzaPepper/CentroVideoJuego_Equipo4#readme"
+  "homepage": "https://github.com/PizzaPepper/CentroVideoJuego_Equipo4#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
 }
