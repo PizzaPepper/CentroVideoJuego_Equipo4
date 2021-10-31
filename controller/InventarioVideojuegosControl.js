@@ -32,7 +32,7 @@ class InventarioVideojuegosControl {
       _id: idBuscar
     }, {
       $set: {
-        existencias: numExistencias
+        existencia: numExistencias
       }
     });
     if (user.modifiedCount != 0) {
