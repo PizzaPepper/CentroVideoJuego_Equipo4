@@ -1,9 +1,15 @@
 const express = require('express');
 const morgan = require("morgan");
-
+const cors = require("cors");
 const trabajadorRouter = require('./routes/TrabajadorRoutes');
 const videojuegoRouter = require('./routes/VideojuegoRouters');
 const inventarioVideojuegosRouter = require ('./routes/InventarioVideojuegosRoutes');
+
+const corsOptions = {
+    origin:"*",
+    Credential:true,
+    optionSuccessStatus:200,
+  } 
 
 const globalErrorHandler = require('./utils/appError');
 const app = express();
@@ -11,6 +17,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(morgan('dev'));
+app.use(cors(corsOptions));
 
 //Routers
 app.use('/api/v1/trabajador', trabajadorRouter);
