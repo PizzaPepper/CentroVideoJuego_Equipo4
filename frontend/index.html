@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Iniciar Sesión</title>
+  </head>
+  <body>
+    <main>
+      <div class="contenedor">
+        <header>
+          <h1>Centro de Videojuegos</h1>
+        </header>
+
+        <figure>
+          <img src="img/inicio.png" alt="logo" width="130" />
+        </figure>
+
+        <section>
+          <hgroup>
+            <h4>Jorge Eliu Gonzalez Fierro - 00000294494</h4>
+            <h4>Juan Carlos Lizarraga Encinas - 00000181661</h4>
+            <h4>Bryan Isaac Segoviano Ruiz - 00000186203</h4>
+            <h4>Rene Eduardo Hernandez Estrella - 00000181544</h4>
+            <hr />
+          </hgroup>
+
+          <div class="datosInicio">
+            <form action="menu_principal.html" method="POST">
+              <label><b>Correo:</b></label>
+              <input
+                class="cajaTexto"
+                type="text"
+                name="txtuser"
+                placeholder="Introduzca su correo"
+                required
+              />
+              <label><b>Contraseña:</b></label>
+              <input
+                class="cajaTexto"
+                type="password"
+                name="txtpassword"
+                placeholder="Introduzca su contraseña"
+                required
+              />
+            </form>
+          </div>
+          <input type="submit" class="botonIngresar" value="Ingresar" />
+        </section>
+      </div>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

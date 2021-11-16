@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/stylepag.css" />
+    <title>Actualizar videojuego</title>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <h1>Actualizar videojuego</h1>
+        <label class="mensaje1" id="mensaje1"
+          >Ingrese el ID y los datos solicitados para actualizar un videojuego
+        </label>
+      </header>
+
+      <section>
+        <form action="datos" method="PUT" id="formulario_registro" class="registro">
+        <input type="text" placeholder="ID del videojuego" required id="id">
+        <hr>
+        <br>
+        <input type="text" placeholder="Nombre del videojuego" required id="titulo">
+        <br>
+        <input type="text" placeholder="Género" required id="genero">
+        <br>
+        <input type="text" placeholder="Clasificación" required id="clasificacion">
+        <br>
+        <input type="text" placeholder="Consola" required id="consola">
+        <br>
+        <input type="text" placeholder="Fabricante" required id="fabricante">
+        <input type="number" placeholder="Versión" required id="version">
+        <br>
+        <input type="submit" value="Actualizar" id="actualizar">
+        <br>
+        <input type="button" value="Cancelar" id="cancelar">
+        </form>
+      </section>
+
+    </main>
+    <script src="actualizarvideojuego.js"></script>
+  </body>
+</html>

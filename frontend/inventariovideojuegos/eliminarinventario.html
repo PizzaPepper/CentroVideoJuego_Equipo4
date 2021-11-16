@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/stylepag.css" />
+    <title>Eliminar inventario de un videojuego</title>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <h1>Eliminar inventario de un videojuego</h1>
+        <label class="mensaje1" id="mensaje1"
+          >Ingrese el ID del inventario de un videojuego
+        </label>
+      </header>
+
+      <section>
+        <form action="datos" method="DELETE" id="formulario_registro" class="registro">
+        <input type="text" placeholder="ID del inventario" required id="id">   
+        <br>
+        <input type="submit" value="Eliminar" id="eliminar">
+        <br>
+        <input type="button" value="Cancelar" id="cancelar">  
+        </form>
+      </section>
+
+    </main>
+    <script src="eliminarinventario.js"></script>
+  </body>
+</html>

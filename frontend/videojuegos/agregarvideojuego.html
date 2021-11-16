@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/stylepag.css" />
+    <title>Agregar videojuego</title>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <h1>Agregar videojuego</h1>
+        <label class="mensaje1" id="mensaje1"
+          >Ingrese los datos solicitados para agregar un nuevo videojuego
+        </label>
+      </header>
+
+      <section>
+        <form  method="POST" id="formulario_registro" class="registro">
+         <input type="text" placeholder="Nombre del videojuego" required id="titulo">
+         <br>
+         <input type="text" placeholder="Género" required id="genero">
+         <br>
+         <input type="text" placeholder="Clasificación" required id="clasificacion">
+         <br>
+         <input type="text" placeholder="Consola" required id="consola">
+         <br>
+         <input type="text" placeholder="Fabricante" required id="fabricante">
+         <input type="number" placeholder="Versión" required id="version">
+         <br>
+        <input type="submit" value="Registrar" id="registrar">
+        <br>
+        <input type="button" value="Cancelar" id="cancelar">
+        </form>
+      </section>
+
+    </main>
+    <script src="agregarvideojuego.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/stylepag.css" />
+    <title>Agregar inventario de un videojuego</title>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <h1>Agregar inventario de un videojuego</h1>
+        <label class="mensaje1" id="mensaje1"
+          >Ingrese los datos solicitados para agregar un nuevo inventario
+        </label>
+      </header>
+
+      <section>
+        <form action="datos" method="POST" id="formulario_registro" class="registro">
+         <label for="videojuegos">Selecciona un videojuego:</label>
+         <select name="videojuegos" id="videojuegos">
+             <option value="Call Of Duty: Vanguard">Call Of Duty: Vanguard</option>
+             <option value="Halo Infinite">Halo Infinite</option>
+         </select>
+        <br>
+        <input type="number" placeholder="Existencia" required id="existencia">
+        <br><br>
+        <label>Fecha de ingreso: [Fecha de hoy]</label>
+        <br><br>
+        <label>Trabajador que lo registra: [Trabajador que inicio sesión]</label>
+        <br>
+        <input type="submit" value="Registrar" id="registrar">
+        <br>
+        <input type="button" value="Cancelar" id="cancelar">
+        </form>
+      </section>
+    </main>
+    <script src="agregarinventario.js"></script>
+  </body>
+</html>

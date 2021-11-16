@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/stylepag.css" />
+    <title>Actualizar inventario de videojuego</title>
+  </head>
+  <body>
+    <main>
+
+      <header>
+        <h1>Actualizar inventario de un videojuego</h1>
+        <label class="mensaje1" id="mensaje1"
+          >Ingrese el ID y la cantidad para actualizar el inventario de un videojuego
+        </label>
+      </header>
+
+      <section>
+        <form action="datos" method="PUT" id="formulario_registro" class="registro">
+        <input type="text" placeholder="ID del inventario" required id="id">
+        <hr>
+        <br>
+        <input type="number" placeholder="Existencia" required id="existencia">
+        <br>
+        <input type="submit" value="Actualizar" id="actualizar">
+        <br>
+        <input type="button" value="Cancelar" id="cancelar">
+        </form>
+      </section>
+
+    </main>
+    <script src="actualizarinventario.js"></script>
+  </body>
+</html>
