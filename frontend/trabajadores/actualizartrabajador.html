@@ -18,25 +18,16 @@
       </header>
 
       <section>
-        <form action="datos" method="PUT" id="formulario_registro" class="registro">
+        <div id="contenedor">
         <input type="text" placeholder="ID del trabajador" required id="id">
         <hr>
         <br>
-        <input type="text" placeholder="Nombre completo" required id="nombre">
-        <br>
         <input type="text" placeholder="Dirección" required id="direccion">
-        <input type="text" placeholder="Teléfono" required id="telefono">
-        <br>
-        <input type="email" placeholder="Correo Electronico" required name="correo"
-        id="correo" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
-        <br>
-        <input type="pass" placeholder="Contraseña" name="contrasena" id="contrasena">
-        <!-- pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[$@$!%?&])[A-Za-z\d$@$!%?&]{8,15} -->
         <br>
         <input type="submit" value="Actualizar" id="actualizar">
         <br>
         <input type="button" value="Cancelar" id="cancelar">
-        </form>
+        </div>
       </section>
 
     </main>

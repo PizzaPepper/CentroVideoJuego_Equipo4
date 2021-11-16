@@ -18,7 +18,7 @@
       </header>
 
       <section>
-        <form  method="POST" id="formulario_registro" class="registro">
+        <div id="contenedor">
         <input type="text" placeholder="Nombre completo" required id="nombre">
         <br>
         <input type="text" placeholder="Dirección" required id="direccion">
@@ -28,12 +28,12 @@
         id="correo" pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$">
         <br>
         <input type="pass" placeholder="Contraseña" name="contrasena" id="contrasena">
-        <!-- pattern="^(?=.[a-z])(?=.[A-Z])(?=.\d)(?=.[$@$!%?&])[A-Za-z\d$@$!%?&]{8,15} -->
-        <br>
+        <br>    
         <input type="submit" value="Registrarse" id="registrarse">
         <br>
         <input type="button" value="Cancelar" id="cancelar">
-        </form>
+        </div>
+        
       </section>
 
     </main>

@@ -16,7 +16,7 @@ agregarEventoRegistrar();
 
 function agregarEventoRegistrar(){
     const btnRegistrar = document.getElementById("registrarse");
-    btnRegistrar.addEventListener("click",agregarTrabajador);
+    btnRegistrar.addEventListener("click",agregarVideojuego);
 }
 
 async function agregarVideojuego(){
