@@ -14,22 +14,23 @@ agregarEventoRegresar();
 agregarEventoRegistrar();
 
 
+
 function agregarEventoRegistrar(){
     const btnRegistrar = document.getElementById("registrarse");
     btnRegistrar.addEventListener("click",agregarVideojuego);
 }
 
 async function agregarVideojuego(){
-    const inTitulo = document.getElementById("titulo");
-    const inGenero = document.getElementById("genero");
-    const inClasificacion = document.getElementById("clasificacion");
-    const inConsola = document.getElementById("consola");
-    const inFabricante = document.getElementById("fabricante");
-    const inVersion = document.getElementById("version");
+    const inTitulo = document.getElementById("titulo").value;
+    const inGenero = document.getElementById("genero").value;
+    const inClasificacion = document.getElementById("clasificacion").value;
+    const inConsola = document.getElementById("consola").value;
+    const inFabricante = document.getElementById("fabricante").value;
+    const inVersion = document.getElementById("version").value;
 
 
-    const trab = {
-        titulo: inTitulo,
+    const vid = {
+        titulo:inTitulo,
         genero:inGenero,
         clasificacion:inClasificacion,
         consola:inConsola,
@@ -37,7 +38,7 @@ async function agregarVideojuego(){
         version:inVersion
     };
 
-    configFetch.body = JSON.stringify(trab);
+    configFetch.body = JSON.stringify(vid);
 
     const resData= await fetch(URLVideojuego,configFetch)
     .then(res=> res.json());

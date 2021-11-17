@@ -18,19 +18,19 @@ agregarEventoActualizar();
 
 function agregarEventoActualizar() {
     const btnActualizar = document.getElementById("actualizar");
-    btnActualizar.addEventListener("click", actualizarTrabajador);
+    btnActualizar.addEventListener("click", actualizarInventario);
 }
 
 async function actualizarInventario() {
     const inId = document.getElementById("id").value;
-    const inDireccion = document.getElementById("direccion").value;
+    const inExistencia = document.getElementById("existencia").value;
     const update = {
         id:inId,
-        direccion: inDireccion
+        existencia: inExistencia
     };
     configFetch.method = "PUT";
     configFetch.body = JSON.stringify(update);
-    const resData = await fetch(URLTrabajador, configFetch)
+    const resData = await fetch(URLInventario, configFetch)
         .then(res => res.json());
 
     alert(resData.status);
@@ -55,14 +55,11 @@ async function agregarCampos(event) {
 }
 
 function cambiarValores(data) {
+    const inVideojuego = document.getElementById("videojuegos");
     const inExistencia = document.getElementById("existencia");
-    const inVideojuego = document.getElementById("videojuego");
-    const inRegistro = document.getElementById("registro");
-    
+
+    inVideojuego.value = data.videojuegos;
     inExistencia.value = data.existencia;
-    inVideojuego.value = data.videojuego;
-    inRegistro.value = data.registro;
-    
 }
 
 function agregarEventoRegresar() {

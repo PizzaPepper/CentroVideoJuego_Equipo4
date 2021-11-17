@@ -31,7 +31,7 @@ function agregarFila(data){
     const colVideojuego = document.createElement("td");
     const colRegistro = document.createElement("td");
     
-    colVideojuego.innerText=data.videojuego;
+    colVideojuego.innerText=data.videojuego.titulo;
     colExistencia.innerText=data.existencia;
     colRegistro.innerText=data.registro;
     

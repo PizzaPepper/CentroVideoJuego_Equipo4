@@ -29,7 +29,6 @@ async function agregarTrabajador(){
 
 
     const trab = {
-        correo: inCorreo,
         contrasena:inContra,
         correo:inCorreo,
         nombre:inNombre,

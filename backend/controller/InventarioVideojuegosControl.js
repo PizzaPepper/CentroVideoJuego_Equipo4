@@ -47,6 +47,7 @@ class InventarioVideojuegosControl {
     const user = await invGameModel.findOne({
       _id: idBuscar
     });
+    
     if (user != null) {
       return user;
     } else {
@@ -56,7 +57,8 @@ class InventarioVideojuegosControl {
   }
 
   async consultarTodosDatos() {
-    const users = await invGameModel.find();
+    const users = await invGameModel.find()
+    .populate({path:"videojuego",model:"videojuegos"});
     return users;
   }
 
