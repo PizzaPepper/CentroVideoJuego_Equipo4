@@ -4,45 +4,49 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script defer src="menu.js"></script>
     <link rel="stylesheet" href="css/index.css" />
     <title>Menú Principal</title>
   </head>
   <body>
     <main>
-      <div class="contenedor">
+      <div id="app" class="contenedor">
         <header>
-          <h1 id="bienvenida">Bienvenido [NombreTrabajador] !</h1>
+          <h1  id="bienvenida">Bienvenido {{NombreTrabajador}} !</h1>
         </header>
         <hr />
         <h2>Trabajadores</h2>
         <figure>
-          <img src="img/trabajador.png" alt="logo" width="100" />
+          <img :src="imgTrabajador" width="100" alt="logo"/>
         </figure>
-        <button id="btnConsultarTrab">Consultar trabajadores</button>
-        <button id="btnAgregarTrab">Agregar trabajador</button>
-        <button id="btnActualizarTrab">Actualizar trabajador</button>
-        <button id="btnEliminarTrab">Eliminar trabajadores</button>
+        <button v-on:click="cambiar('trabajadores/consultartrabajador.html')" id="btnConsultarTrab">Consultar trabajadores</button>
+        <button v-on:click="cambiar('trabajadores/agregartrabajador.html')" id="btnAgregarTrab">Agregar trabajador</button>
+        <button v-on:click="cambiar('trabajadores/actualizartrabajador.html')" id="btnActualizarTrab">Actualizar trabajador</button>
+        <button v-on:click="cambiar('trabajadores/eliminartrabajador.html')" id="btnEliminarTrab">Eliminar trabajadores</button>
 
         <h2>Videojuegos</h2>
         <figure>
-          <img src="img/videojuego.png" alt="logo" width="100" />
+          <img :src="imgVideojuego" width="100" alt="logo"/>
         </figure>
-        <button id="btnConsultarVideojuegos">Consultar videojuegos</button>
-        <button id="btnAgregarVideojuegos">Agregar videojuego</button>
-        <button id="btnActualizarVideojuegos">Actualizar videojuego</button>
-        <button id="btnEliminarVideojuegos">Eliminar videojuego</button>
+        <button v-on:click="cambiar('videojuegos/consultarvideojuegos.html')" id="btnConsultarVideojuegos">Consultar videojuegos</button>
+        <button v-on:click="cambiar('videojuegos/agregarvideojuego.html')" id="btnAgregarVideojuegos">Agregar videojuego</button>
+        <button v-on:click="cambiar('videojuegos/actualizarvideojuego.html')" id="btnActualizarVideojuegos">Actualizar videojuego</button>
+        <button v-on:click="cambiar('videojuegos/eliminarvideojuego.html')" id="btnEliminarVideojuegos">Eliminar videojuego</button>
 
         <h2>Inventario de videojuegos</h2>
         <figure>
-          <img src="img/inventario.png" alt="logo" width="100" />
+          <img :src="imgInventario" width="100" alt="logo"/> 
         </figure>
-        <button id="btnConsultarInventario">Consultar inventario</button>
-        <button id="btnAgregarInventario">Agregar inventario</button>
-        <button id="btnActualizarInventario">Actualizar inventario</button>
-        <button id="btnEliminarInventario">Eliminar inventario</button>
+        <button v-on:click="cambiar('inventariovideojuegos/consultarinventario.html')" id="btnConsultarInventario">Consultar inventario</button>
+        <button v-on:click="cambiar('inventariovideojuegos/agregarinventario.html')" id="btnAgregarInventario">Agregar inventario</button>
+        <button v-on:click="cambiar('inventariovideojuegos/actualizarinventario.html')"
+        id="btnActualizarInventario">Actualizar inventario</button>
+        <button v-on:click="cambiar('inventariovideojuegos/eliminarinventario.html')"
+        id="btnEliminarInventario">Eliminar inventario</button>
         
       </div>
     </main>
-    <script src="menu.js"></script>
+
   </body>
 </html>

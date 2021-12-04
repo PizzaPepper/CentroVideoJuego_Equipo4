@@ -31,9 +31,11 @@ function agregarFila(data){
     const colVideojuego = document.createElement("td");
     const colRegistro = document.createElement("td");
     
+    console.log(data);
+
     colVideojuego.innerText=data.videojuego.titulo;
     colExistencia.innerText=data.existencia;
-    colRegistro.innerText=data.registro;
+    colRegistro.innerText=data.registro[0].idTrabajador;
     
     row.innerHTML += colVideojuego.outerHTML;
     row.innerHTML += colExistencia.outerHTML;
